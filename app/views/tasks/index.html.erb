@@ -8,6 +8,10 @@
   <h2><%= task.title %></h2>
   <p><%= task.details %></p>
 
-  <%= link_to 'show this task', task_path(task)  %>
+  <%= link_to 'show this task', task_path(task) %>
+  <%= link_to 'edit', edit_task_path(task)  %>
+  <%= link_to 'delete', task_path(task), method: :delete, data: { confirm: "Are you sure?" }  %>
+
+  <%= link_to 'new task', new_task_path  %>
 
 <% end %>
